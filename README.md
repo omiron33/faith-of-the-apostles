@@ -4,7 +4,7 @@ An Orthodox Christian song and code-rendered lyric film about the faith handed d
 
 ![The Faith of the Apostles: amber title in a candlelit cathedral](docs/poster.jpg)
 
-[Listen and watch at TechnoChristianity](https://technochristianity.com/music/) · [Watch the official video](https://www.youtube.com/watch?v=d9gm3WmhYlE) · [Download the song and video](https://github.com/omiron33/faith-of-the-apostles/releases/tag/v3.0.0)
+[Listen and watch at TechnoChristianity](https://technochristianity.com/music/) · [Watch the official video](https://www.youtube.com/watch?v=Ilco2wMNuHU) · [Download the song and video](https://github.com/omiron33/faith-of-the-apostles/releases/tag/v3.0.0)
 
 The v3 film runs **4:41**, at **1920 × 1080 / 60 fps**. Its 38 scenes combine GPU shaders, a reconstructed church interior, procedural materials and typography aligned to the recording. The source includes the deterministic rendering runtime used by these scenes, with a portable command-line interface.
 
