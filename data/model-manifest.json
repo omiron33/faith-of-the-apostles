@@ -1,0 +1,230 @@
+{
+  "baseUrl": "https://raw.githubusercontent.com/omiron33/technochristianity-assets/500e2b3859a2f399e1c95b519cab8a571b77d64d/releases/2026-09-22/church/savior-on-spilled-blood/",
+  "destination": "models/savior-on-spilled-blood",
+  "files": {
+    "geometry-001.bin": {
+      "byteLength": 6213658,
+      "sha256": "0351b3361a519ff790aec732daf8c321ce844f4e02306405ef364be60d276d5c"
+    },
+    "geometry.bin": {
+      "byteLength": 24585640,
+      "sha256": "98e224f55df2f8f26fd7eec2dcd5803b2231afea39b41bf0a7fffde751f67c16"
+    },
+    "model-textures/savior-on-spilled-blood-image-000-exterior-brick.jpg": {
+      "byteLength": 206403,
+      "sha256": "def36f5d2ad320cf829cc3dd5cce3773588650541664bece903e3d5430aa6738"
+    },
+    "model-textures/savior-on-spilled-blood-image-001-cream-marble.jpg": {
+      "byteLength": 31263,
+      "sha256": "bba5ee8bc50c7cf6efc5b6620b97357530b804660851fce705b51b031ef7ecbd"
+    },
+    "model-textures/savior-on-spilled-blood-image-002-green-marble.jpg": {
+      "byteLength": 70863,
+      "sha256": "06038ecaf13cef2ca4684d68cfbdc7e3bc8c6d0abdb5dd09095b1f0d24649879"
+    },
+    "model-textures/savior-on-spilled-blood-image-003-ciborium-stone.jpg": {
+      "byteLength": 26658,
+      "sha256": "f60af2f078db1066d7a17c914de4eed38f30d088c3937dcd3c32f94fd0ac58ee"
+    },
+    "model-textures/savior-on-spilled-blood-image-004-red-marble.jpg": {
+      "byteLength": 42236,
+      "sha256": "74f0556490ee69aad1b2180de17f614de1cb9460473efffbd0485f89ace4bf30"
+    },
+    "model-textures/savior-on-spilled-blood-image-005-yellow-floor-marble.jpg": {
+      "byteLength": 28897,
+      "sha256": "6cdb02aee4f74d52d091c72eec28b22eddf9cd3d5a3d6b37bc16d5a4e3ed3780"
+    },
+    "model-textures/savior-on-spilled-blood-image-006-white-floor-marble.jpg": {
+      "byteLength": 26041,
+      "sha256": "8f7ef142dd470ce1408870cb0635720844f9ad52d8b2364ed8c9224f0a7575f7"
+    },
+    "model-textures/savior-on-spilled-blood-image-007-floor-honey-medallion.jpg": {
+      "byteLength": 11909,
+      "sha256": "7bc5d856b8113f4bd1b298b05e742d53c24fe572ccfc9eb997ef0c2883059126"
+    },
+    "model-textures/savior-on-spilled-blood-image-008-floor-porphyry-medallion.jpg": {
+      "byteLength": 12975,
+      "sha256": "caf4fd6e25d1dbd6be1ca691f1b3090692ba604987b50ff611d44801ee3a2e4c"
+    },
+    "model-textures/savior-on-spilled-blood-image-009-floor-marble-veins.jpg": {
+      "byteLength": 79989,
+      "sha256": "cc43f3400162c11f33976f07ebc79fd4c99b75a6d3d70fe11942dbf03aa34f64"
+    },
+    "model-textures/savior-on-spilled-blood-image-010-blue-floral-border.jpg": {
+      "byteLength": 85627,
+      "sha256": "f91abc7098e00db50d3c807c774fd9f5595db21b10969f4fdf515f6c599e8f2b"
+    },
+    "model-textures/savior-on-spilled-blood-image-011-memorial-floor-red-stone.jpg": {
+      "byteLength": 18774,
+      "sha256": "8f009959906fa214e3a3e09c5d9d39561820fde99442ffbfe29da8cedcf3d2ef"
+    },
+    "model-textures/savior-on-spilled-blood-image-012-memorial-floor-green-stone.jpg": {
+      "byteLength": 34972,
+      "sha256": "ea7d56c70c56880f41b74677f490597d68c59d22d2d2085e66a3e5a48e00723a"
+    },
+    "model-textures/savior-on-spilled-blood-image-013-memorial-floor-dark-stone.jpg": {
+      "byteLength": 26487,
+      "sha256": "fe418bf2542fa73df86ed5a85af6784d270be151fcc511512ecae11017baf455"
+    },
+    "model-textures/savior-on-spilled-blood-image-014-memorial-flagstone.jpg": {
+      "byteLength": 5637,
+      "sha256": "9079cbaae7be44e0a39173bbd653b4aef0c2f0b30317f466dbf881664b1bd17f"
+    },
+    "model-textures/savior-on-spilled-blood-image-015-memorial-cobblestone.jpg": {
+      "byteLength": 6998,
+      "sha256": "c0e2c4462e2d6f2291167ece1c553102069c94f7e6e1ab8fbf68e0ea25826c31"
+    },
+    "model-textures/savior-on-spilled-blood-image-016-memorial-jasper-grain.jpg": {
+      "byteLength": 31801,
+      "sha256": "6a69af1dc39fdf67d75568155f4f76335fc861a9b4ca71619ce81e51984c432e"
+    },
+    "model-textures/savior-on-spilled-blood-image-017-gold-mosaic.jpg": {
+      "byteLength": 13314,
+      "sha256": "e1e466d16810f69152e676e0157cc105bd86b9e8d6f5ba8da2643359166cb28e"
+    },
+    "model-textures/savior-on-spilled-blood-image-018-memorial-vault-continuous.jpg": {
+      "byteLength": 2117824,
+      "sha256": "d6b2a25856fabf86e2f0d1e06f915ae4400faf327a265ddbb23699a10707134f"
+    },
+    "model-textures/savior-on-spilled-blood-image-019-floral-border.jpg": {
+      "byteLength": 171105,
+      "sha256": "0f86ef366a946ced6f5dc39b2e99341ccd5445ba65a1c9eaaabbe25717ee7e53"
+    },
+    "model-textures/savior-on-spilled-blood-image-020-east-vault-ornament.jpg": {
+      "byteLength": 289668,
+      "sha256": "e5a0db3fbe8961a4e9758042f897a8c5a70554827829c2d033455906130cb3de"
+    },
+    "model-textures/savior-on-spilled-blood-image-021-photo-atlas-0.jpg": {
+      "byteLength": 3260321,
+      "sha256": "6578efe02255d5206191e405eb40fc11b401a288c976319eb5a1a81c2382072a"
+    },
+    "model-textures/savior-on-spilled-blood-image-022-photo-atlas-1.jpg": {
+      "byteLength": 2089778,
+      "sha256": "9780238f36912b31f5127e339f0bff3f05ce9daab7d920f328b926e1a5c4cace"
+    },
+    "model-textures/savior-on-spilled-blood-image-023-photo-atlas-10.jpg": {
+      "byteLength": 907521,
+      "sha256": "50f8f3c67a91d163e964f034dbf466b210f89315199284bdfbaa88781897c67e"
+    },
+    "model-textures/savior-on-spilled-blood-image-024-photo-atlas-11.jpg": {
+      "byteLength": 1012248,
+      "sha256": "220e423085b64f3572c007ab1b5eb86c0515b30a77307f9fa30618ac52bf619d"
+    },
+    "model-textures/savior-on-spilled-blood-image-025-photo-atlas-12.jpg": {
+      "byteLength": 2027945,
+      "sha256": "63684f75541a4d34aaf97fdc78d04de9750fa9ad635cef1d514cd88116579601"
+    },
+    "model-textures/savior-on-spilled-blood-image-026-photo-atlas-13.jpg": {
+      "byteLength": 3445459,
+      "sha256": "879451f3b030fb949fdf1621ce5ab8f6d0e3d8eda140a7cfd3a5cbe7199110af"
+    },
+    "model-textures/savior-on-spilled-blood-image-027-photo-atlas-14.jpg": {
+      "byteLength": 4880588,
+      "sha256": "19b1a294c3c8f82cf4a053afe7427f225b3ac934dda9f14292819c55a6884079"
+    },
+    "model-textures/savior-on-spilled-blood-image-028-photo-atlas-15.jpg": {
+      "byteLength": 2177562,
+      "sha256": "89efe9fe1864fa55fc1f8416a3ecdbefbbca63918a957f27ea5e055cd9249db0"
+    },
+    "model-textures/savior-on-spilled-blood-image-029-photo-atlas-16.jpg": {
+      "byteLength": 1948278,
+      "sha256": "8b418dbfc6f6811e1d3ac8bebf3ca458ff105b681eeb2d0f118f96d436b340dd"
+    },
+    "model-textures/savior-on-spilled-blood-image-030-photo-atlas-17.jpg": {
+      "byteLength": 3079771,
+      "sha256": "521a76c19d66bd80865e8bc217dee88c6e047c933f3ffeeef47a3c417d67806a"
+    },
+    "model-textures/savior-on-spilled-blood-image-031-photo-atlas-18.jpg": {
+      "byteLength": 2954327,
+      "sha256": "fef253618273a1898e2b5495a6a284deb68788af9eeb73ae779bc57a5354411c"
+    },
+    "model-textures/savior-on-spilled-blood-image-032-photo-atlas-19.jpg": {
+      "byteLength": 2571861,
+      "sha256": "cd3803c766f92a67a30bb5f590fd3367bfeb9585fd84402a272938db588c936a"
+    },
+    "model-textures/savior-on-spilled-blood-image-033-photo-atlas-2.jpg": {
+      "byteLength": 2239647,
+      "sha256": "a5d96a973935c81fc59b935c0e17df1b8ff93ce67817c7911e02ca54c709c290"
+    },
+    "model-textures/savior-on-spilled-blood-image-034-photo-atlas-20.jpg": {
+      "byteLength": 3858154,
+      "sha256": "fe3b0ca730d7413c7564ab135ff0ddb30966460de1678bcd96a261deff3760ca"
+    },
+    "model-textures/savior-on-spilled-blood-image-035-photo-atlas-21.jpg": {
+      "byteLength": 2365162,
+      "sha256": "4305de5762c4615b434f7249a5e0df4e2fc059b380b960bac56f920dc582656b"
+    },
+    "model-textures/savior-on-spilled-blood-image-036-photo-atlas-22.jpg": {
+      "byteLength": 2862982,
+      "sha256": "4e464e694281f0bf4caf152d2c8da7d83c0cd096c24b7a5dcba6f78d864a0849"
+    },
+    "model-textures/savior-on-spilled-blood-image-037-photo-atlas-23.jpg": {
+      "byteLength": 2536944,
+      "sha256": "259ac2e59cd8cef0b5c5fc09db9f00e3d425fc1156d0438b02f5c043dc46a97b"
+    },
+    "model-textures/savior-on-spilled-blood-image-038-photo-atlas-24.jpg": {
+      "byteLength": 2134632,
+      "sha256": "2d38e0cbbfcbe1ee61bd5d753facb2d76401903a22c4f54dbc1822065cdc052a"
+    },
+    "model-textures/savior-on-spilled-blood-image-039-photo-atlas-25.jpg": {
+      "byteLength": 2610003,
+      "sha256": "a8e51c8d18f30d31513746bba7a0f22532d78564f6afef35ebad5a903109d266"
+    },
+    "model-textures/savior-on-spilled-blood-image-040-photo-atlas-26.jpg": {
+      "byteLength": 3203777,
+      "sha256": "f141274fbd0b18c5aa98cdacb13603d7605e221514f5d212fc68024d128abba3"
+    },
+    "model-textures/savior-on-spilled-blood-image-041-photo-atlas-27.jpg": {
+      "byteLength": 4756523,
+      "sha256": "1afb6704667115f868703c8f4822065310b9f98a4894626e16cc9d6e95399b88"
+    },
+    "model-textures/savior-on-spilled-blood-image-042-photo-atlas-28.jpg": {
+      "byteLength": 2596176,
+      "sha256": "ed83020d324eceb08fe02ad40132a169c2828bfada64198a9e29b155ec2ca28e"
+    },
+    "model-textures/savior-on-spilled-blood-image-043-photo-atlas-3.jpg": {
+      "byteLength": 2185521,
+      "sha256": "ca60201124e503ed4c8400cf80627eb13895cb59ed6a04b4aa46fa5ac777960d"
+    },
+    "model-textures/savior-on-spilled-blood-image-044-photo-atlas-4.jpg": {
+      "byteLength": 1386419,
+      "sha256": "a5bafa7664cf5e0daf4364670c3ea8934bdba50a24b5a6c5ae50e2ac36b2c845"
+    },
+    "model-textures/savior-on-spilled-blood-image-045-photo-atlas-5.jpg": {
+      "byteLength": 1323401,
+      "sha256": "dc9a7a69c68c9f2a135843d5dd7790178d37a955833702e4ec3b6980616ed8e8"
+    },
+    "model-textures/savior-on-spilled-blood-image-046-photo-atlas-6.jpg": {
+      "byteLength": 2019061,
+      "sha256": "9e7be3f8c6dab1b577344504b00e2fcfa2bd39ec38807ec095948735384dc4d6"
+    },
+    "model-textures/savior-on-spilled-blood-image-047-photo-atlas-7.jpg": {
+      "byteLength": 2052647,
+      "sha256": "6684d08da1380096bbdd4df1693fe2227330bab9fe2390b34939eb96bbbc3060"
+    },
+    "model-textures/savior-on-spilled-blood-image-048-photo-atlas-8.jpg": {
+      "byteLength": 991589,
+      "sha256": "80c37c4068e973bc5b1fbcb64126b59900b0abe833c6350cd739406f28364c6c"
+    },
+    "model-textures/savior-on-spilled-blood-image-049-photo-atlas-9.jpg": {
+      "byteLength": 826828,
+      "sha256": "58e499f6a4dba4bb154ba99330bdccfaa0ab591b46cea5417999fba24ede2132"
+    },
+    "savior-on-spilled-blood.gltf": {
+      "byteLength": 132888,
+      "sha256": "4c39450d0e484fcdc67d901c7071832275d75ebb3cdf469c053b81c193c30cdb"
+    },
+    "LICENSE.md": {
+      "byteLength": 8391,
+      "sha256": "dc4c3536c085d0966d6effafbf7ddf87ee9a4505314a179a66106d239cd20466"
+    },
+    "credits.json": {
+      "byteLength": 15554,
+      "sha256": "c7d3ed02050977abc3466a49c18da6ad1aa26201ae8f45657f1aeb13a2870afe"
+    },
+    "savior-on-spilled-blood-package-manifest.json": {
+      "byteLength": 40680,
+      "sha256": "a73f1f04bb882e33b212d3b63b87079e90c64934966961d5fffb03ee10894010"
+    }
+  }
+}

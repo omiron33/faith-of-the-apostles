@@ -14,3 +14,7 @@ scenes/_old/
 tools/sheet.sh
 tools/provisional.py
 movies/
+
+.env
+.env.*
+*.log

@@ -1,31 +1,55 @@
 # The Faith of the Apostles
 
-Scenes for a lyric film of *The Faith of the Apostles*, an Orthodox confession of the faith handed
-down from the Apostles. Every frame is drawn in code: raymarched GPU shaders and one Three.js
-interior whose surfaces are all procedural, rendered at 1920×1080 and 60 fps with many jittered
-sub-frames averaged per frame (motion blur, anti-aliasing, depth of field) and one film finish.
+An Orthodox Christian song and code-rendered lyric film about the faith handed down from the Apostles.
 
-The renderer is a separate lyric film engine (not public). This repository holds only what belongs
-to this song:
+![The Faith of the Apostles: amber title in a candlelit cathedral](docs/poster.jpg)
 
-- `scenes/`: one picture module and one lyric module per scene; `film.json` lists them in order.
-  `tools/make-scenes.py` writes the scenes that are shots in the two churches from one table.
-- `lib/`: the worlds. `gothic.js` (a Gothic cathedral in darkness, moonlight and votives),
-  `spilled.js` (the Church of the Savior on Spilled Blood: only the building's geometry is loaded;
-  every surface, mosaic, marble and brick, is redrawn in code), `neon.js` (the filioque),
-  and one `x-<scene>.js` per verse world: the old road, the Sea of Galilee, the map of the
-  Apostles' journeys, the ruins, the cracked earth of 1054, the two shores, the descent of light,
-  the night sea, the tapers of succession, the empty tomb, the mended cup and the forge.
-- `lib/type.js`: the lyric voices (each word set by what it means) and layouts.
-- `data/lyrics.json`: every word with its sung start and end, force-aligned to the recording, plus
-  measured beats.
-- `docs/`: the brief and the authoring guide.
+[Listen and watch at TechnoChristianity](https://technochristianity.com/music/) · [Watch the official video](https://www.youtube.com/watch?v=GIqK4IMjw0g) · [Download the song and video](https://github.com/omiron33/faith-of-the-apostles/releases/tag/v2.1.0)
 
-The filioque is shown as what the Orthodox Church holds it to be: an addition to the Creed, here a
-cheap neon sign planted in the nave, knocked down by lightning, the Creed's own words standing:
-"who proceeds from the Father" (John 15:26; Constantinople, 381).
+The v2 film runs **4:41**, at **1920 × 1080 / 60 fps**. Its 38 scenes combine GPU shaders, a reconstructed church interior, procedural materials and typography aligned to the recording. The source includes the deterministic rendering runtime used by these scenes, with a portable command-line interface.
 
-The church interior's geometry comes from a separately published model of the Church of the
-Savior on Spilled Blood; it is not included here (`models/` is not committed).
+## Quick start
 
-Fonts: EB Garamond and Inter Tight (supplied by the engine) and Anton (`fonts/`, OFL).
+Install Node.js 22 or later, Google Chrome and FFmpeg (`ffmpeg` and `ffprobe` on your PATH), then:
+
+```sh
+npm ci
+npm run validate
+npm run still -- --scene s00-title --time 4 --samples 2
+```
+
+The still appears in `out/portable/stills/`. No recording or downloaded model is needed for this title scene. Set the `CHROME` environment variable if Chrome is installed outside the platform's usual location.
+
+To render scenes inside the Church of the Savior on Spilled Blood:
+
+```sh
+npm run assets
+npm run still -- --scene s13-holy --time 101 --samples 2
+```
+
+The asset command installs a pinned public model package and verifies every file's SHA-256. Its original credits accompany the download. All visible church materials are drawn procedurally for this film.
+
+For the complete film, place the original 48 kHz stereo recording at `media/song.wav` and run:
+
+```sh
+npm run render -- --draft
+npm run render
+```
+
+Full rendering is GPU intensive and can take hours. The draft uses 30 fps and two samples; the final uses 60 fps, 32 picture samples and 16 lyric samples. Scenes are rendered one at a time and completed outputs are cached. See [rendering](docs/RENDERING.md) for scene clips, dependencies and limitations.
+
+## Source layout
+
+- `film.json` — scene order and timings.
+- `scenes/` — one picture module and one lyric module per scene.
+- `lib/` — worlds, camera shots, procedural materials and typography.
+- `data/` — aligned words, measured musical timing and the pinned model manifest.
+- `renderer/` — deterministic browser rendering and local FFmpeg encoding.
+- `tools/` — rendering, validation and optional timing utilities.
+- `releases/v2.json` — published master, web derivative and source-audio fingerprints.
+
+[Scene architecture](docs/AUTHORING.md) · [Visual notes](docs/BRIEF.md) · [Credits and licenses](docs/CREDITS.md)
+
+## License
+
+Source code is released under the [MIT License](LICENSE). Fonts retain their SIL Open Font License notices. Downloaded model assets retain their individual licenses and credits. The song recording and completed film are separate media releases; the source-code license does not grant rights to redistribute those recordings.
