@@ -1,33 +1,25 @@
-// 22 · the hard silence, the breath, and the echoed "FILL-EE-OH-KWAY".
-// Rejected. In the silence the sign stutters. On the echo lightning floods the windows; the sign
-// sparks, dies and topples backward onto the stone, and the camera walks past it toward the
-// votives, which burn on. A quiet note: the Creed's own words, nothing added.
+// 22 · the hard silence, the breath, the second "filioque" — and it breaks.
+// The same dark nave. In the silence the camera holds, barely moving. On the second sung word
+// lightning floods the windows and the frame jolts as the word shatters; then the stillness after,
+// and the votives come back, warm, one bank of light in the dark: the Creed as it was given.
 import { gothicShot, lightning } from '/song/lib/shots.js';
-import { linesIn, ease } from '/song/lib/type.js';
-import { NEON_GLSL, NEON_UNIFORMS, neonText, neonLightPos } from '/song/lib/neon.js';
+import { linesIn, ease, spring } from '/song/lib/type.js';
 export const kind = 'shader';
 export default (P) => {
   const lines = linesIn(P);
-  const echo = lines[0].start;
-  const lp = neonLightPos();
+  const tb = lines[0].start + 0.12;
   return gothicShot(P, {
     name: 's22-reject',
-    cam: (p, t) => {
-      const k = ease.inOut3(Math.min(1, Math.max(0, (t - echo - 1.0) / 4.5)));
-      return { pos: [1.2 - 3.0 * k, 1.7 - 0.4 * k, 7.4 + 1.2 * k], target: [0.4 - 3.4 * k, 2.3 - 1.6 * k, 14 - 4.6 * k], fov: 46 };
-    },
     ease: (x) => x,
-    extra: NEON_GLSL, textSize: [3840, 2160], drawText: neonText,
-    uniforms: { ...NEON_UNIFORMS, uVotive: [-3.1, 0.0, 9.2], uP1: lp, uP1c: [0, 0, 0] },
-    flash: (t) => lightning(t, echo + 0.05, 1.2),
-    update: (t, u) => {
-      let on;
-      if (t < echo) on = (Math.sin(t * 41) * Math.sin(t * 13) > -0.2 ? 0.7 : 0.08);
-      else on = Math.max(0, 1.3 - (t - echo) / 0.25);
-      u.uNeon.value = on;
-      u.uP1c.value.set(9 * on, 0.8 * on, 3.4 * on);
-      u.uTopple.value = ease.in2(Math.min(1, Math.max(0, (t - echo - 0.35) / 0.9)));
-      u.uSignOn.value = 1;
+    cam: (p, t) => {
+      const sh = t > tb ? Math.exp(-(t - tb) * 5) * 0.06 : 0;
+      const j = Math.sin(t * 61) * sh, k = Math.cos(t * 47) * sh;
+      const back = ease.inOut3((t - tb - 1.0) / 5.0);
+      return { pos: [j, 2.1 + k - 0.6 * back, 20 - 7 * back], target: [0.0, 8.5 - 3.5 * back, 62], fov: 46 + 4 * back };
     },
+    uniforms: { uVotive: [-3.1, 0.0, 9.2], uVotiveOn: 0, uMoonCol: [3.8, 4.4, 6.0], uAmb: [0.08, 0.09, 0.13] },
+    flash: (t) => lightning(t, tb - 0.02, 1.3),
+    update: (t, u) => { u.uVotiveOn.value = t > tb + 2.4 ? 1 : 0; },
+    post: (t) => ({ saturation: 0.7 + 0.25 * ease.inOut3((t - tb - 2.4) / 2.0), exposure: 2.3 + 0.3 * ease.inOut3((t - tb - 2.4) / 2.0) }),
   });
 };

@@ -1,14 +1,10 @@
-// The word itself, in its error voice, jittering in under the sign: loud, crooked, cheap.
-import { lyricModule, paint, measure, arrive, outFade } from '/song/lib/type.js';
+// The first sung "filioque": the word itself in carved stone capitals, heavy and cold, rising
+// slowly into place over the nave on its onset. No phonetics: the Latin word.
+import { lyricModule, ease, clamp01 } from '/song/lib/type.js';
+import { drawWord } from '/song/lib/shatter.js';
 export default lyricModule((ctx, t, P, lines) => {
   const w = lines[0].words[0];
-  const st = arrive(w, t);
-  if (st.a <= 0) return;
-  const px = 300;
-  const ww = measure(ctx, w.w, px);
-  const j = Math.floor(t * 30);
-  const dx = ((j * 7919) % 13 - 6) * 3 * (t - w.start < 0.6 ? 1 : 0.2);
-  ctx.save(); ctx.translate(1920 + dx, 1820); ctx.rotate(-0.06);
-  paint(ctx, w.w, -ww / 2, 0, px, { alpha: st.a * outFade(t, P.to - 0.15, P.to) });
-  ctx.restore();
-}, { shade: 0.45 });
+  const k = ease.out3(clamp01((t - w.start + 0.05) / 0.5));
+  if (k <= 0) return;
+  drawWord(ctx, t, { cx: 1920, cy: 1080 + 40 * (1 - k), alpha: k, scale: 0.96 + 0.04 * k });
+}, { shade: 0.55 });

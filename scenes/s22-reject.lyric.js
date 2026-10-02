@@ -1,19 +1,15 @@
-// The echo of the word, smaller, failing with the sign; then the note: the Creed as given.
-import { lyricModule, paint, measure, arrive, outFade, note, ease, clamp01 } from '/song/lib/type.js';
+// The second "filioque": the word stands again; a crack runs through it in the breath before it
+// is sung, and on the word it shatters and falls away. After the silence, the Creed's own words.
+import { lyricModule, note, outFade, ease, clamp01 } from '/song/lib/type.js';
+import { drawWord } from '/song/lib/shatter.js';
 export default lyricModule((ctx, t, P, lines) => {
   const w = lines[0].words[0];
-  const st = arrive(w, t);
-  const a = st.a * outFade(t, w.start + 0.35, w.start + 0.75);
-  if (a > 0) {
-    const px = 220, ww = measure(ctx, w.w, px);
-    const j = Math.floor(t * 30);
-    ctx.save(); ctx.translate(1920 + ((j * 7919) % 13 - 6) * 6, 1820); ctx.rotate(0.05);
-    paint(ctx, w.w, -ww / 2, 0, px, { alpha: a * (j % 3 === 0 ? 0.4 : 1) });
-    ctx.restore();
-  }
-  const k = ease.out3(clamp01((t - w.start - 2.2) / 1.2)) * outFade(t, P.to - 0.3, P.to);
+  const tb = w.start + 0.12;
+  const a = ease.out3(clamp01((t - P.from) / 0.8));
+  drawWord(ctx, t, { cx: 1920, cy: 1080, alpha: a, tc0: w.start - 0.9, tb });
+  const k = ease.out3(clamp01((t - tb - 2.6) / 1.4)) * outFade(t, P.to - 0.3, P.to);
   if (k > 0) {
-    note(ctx, 'WHO PROCEEDS FROM THE FATHER', 1920, 1720, { px: 78, align: 'center', alpha: 0.95 * k, color: '255, 214, 160', track: 0.3 });
-    note(ctx, 'JOHN 15:26   ·   CONSTANTINOPLE 381   ·   NOTHING ADDED', 1920, 1840, { px: 44, align: 'center', alpha: 0.8 * k });
+    note(ctx, 'WHO PROCEEDS FROM THE FATHER', 1920, 1500, { px: 86, align: 'center', alpha: 0.95 * k, color: '255, 214, 160', track: 0.3 });
+    note(ctx, 'JOHN 15:26   ·   CONSTANTINOPLE 381', 1920, 1620, { px: 46, align: 'center', alpha: 0.8 * k });
   }
-}, { shade: 0.5 });
+}, { shade: 0.55 });

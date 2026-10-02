@@ -2,4 +2,4 @@
 import { spilledShot } from '/song/lib/shots.js';
 import { linesIn } from '/song/lib/type.js';
 export const kind = 'three';
-export default (P) => { const lines = linesIn(P); return spilledShot(P, { name: 's32-holy2', cam: (p, t) => ({ pos: [0, 2.0 + 6 * p, 0.01], target: [0.0, 30, 0.02], fov: 72 - 8 * p, roll: -0.4 - 0.8 * p }), fill: 6.0 }); };
+export default (P) => { const lines = linesIn(P); return spilledShot(P, { name: 's32-holy2', cam: (p, t) => ({ pos: [4.0 * Math.sin(0.6 + 1.2 * p), 9.5, 4 - 4.0 * Math.cos(0.6 + 1.2 * p)], target: [0, 9.5, 4], fov: 60 }), fill: 6.0 }); };

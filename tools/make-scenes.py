@@ -3,7 +3,7 @@ Each scene is one shot in one of the two worlds: 'sb' (Spilled Blood, Three.js) 
 cathedral, raymarched). cam is JS for (p, t) => ({ pos, target, fov, ... }); lyric is JS for the
 body of (ctx, t, P, lines) => {...}. Scenes listed in KEEP are hand-written and left alone."""
 import os
-KEEP = {'s21-error', 's22-reject', 's02-road', 's04-sea', 's05-map', 's06-succession', 's08-ruins', 's15-shores', 's17-years', 's18-cracks', 's27-descent', 's28-tomb', 's34-why', 's35-complete', 's36-theosis', 's31-road2'}
+KEEP = {'s21-error', 's22-reject', 's02-road', 's04-sea', 's05-map', 's06-succession', 's08-ruins', 's15-shores', 's17-years', 's18-cracks', 's27-descent', 's28-tomb', 's34-why', 's35-complete', 's36-theosis', 's31-road2', 's12-nave', 's23-held'}
 
 def sb(cam, **o): return dict(world='sb', cam=cam, **o)
 def g(cam, **o): return dict(world='g', cam=cam, **o)
@@ -12,7 +12,7 @@ V = "verse(ctx, t, P, lines, {%s});"
 SPEC = {
   # intro: darkness, then the Gothic nave lit by one bank of votives kindling, title
   's00-title': g("({ pos: [0.8, 1.0 + 0.6 * p, 2.0 + 3.0 * p], target: [-0.6, 3.0 + 4.0 * p, 30], fov: 50 })",
-                 uniforms="uVotive: [-3.1, 0.0, 9.2]", update="u.uVotiveOn.value = t > 0.45 ? 1 : 0; u.uMoonCol.value.set(...[4.6, 5.4, 7.2].map((v) => v * Math.min(1, Math.max(0, (t - 1.0) / 6.0))));",
+                 uniforms="uVotive: [-3.1, 0.0, 9.2]", update="u.uMoonCol.value.set(...[4.6, 5.4, 7.2].map((v) => v * ease.inOut3(Math.min(1, Math.max(0, (t - 1.0) / 7.0)))));", drift="0.004",
                  exposure="2.6", post="({ fade: 0 })",
                  lyric="""const k = ease.out3(clamp01((t - 2.2) / 1.6)) * outFade(t, P.to - 0.6, P.to);
   if (k <= 0) return;
@@ -64,7 +64,7 @@ SPEC = {
   's19-slab': g("({ pos: [2.6, 1.2, 4.0 + 3 * p], target: [-3.1, 0.9, 9.2], fov: 42, focus: 6.5 })", uniforms="uVotive: [-3.1, 0.0, 9.2], uAperG: 0.02",
                 lyric=V % "x: 3580, y: 900, px: 200, align: 'right', group: 2, gap: 1.3"),
   's20-edge': g("({ pos: [-2.55, 0.95 + 0.05 * p, 8.5 + 0.2 * p], target: [-3.0, 0.82, 9.35], fov: 30, focus: 0.95 })", uniforms="uVotive: [-3.1, 0.0, 9.2], uAperG: 0.025, uMoonCol: [3.0, 3.6, 5.0]",
-                lyric=V % "x: 2300, y: 1560, px: 200, align: 'left', group: 2, gap: 1.3"),
+                lyric=V % "x: 3580, y: 1560, px: 190, align: 'right', group: 2, gap: 1.3"),
   # after the rejection: the faith held, back in Spilled Blood
   's23-held': sb("({ pos: [0, 6 - 2 * p, -9 + 3 * p], target: [0, 9 - 2 * p, 10], fov: 56 })",
                  lyric=V % "x: 260, y: 1500, px: 190, align: 'left', group: 2, gap: 1.3"),
@@ -84,7 +84,7 @@ SPEC = {
                      lyric="shout(ctx, lines[0].words, t, { cx: 960, y: 1500, big: 360, alpha: outFade(t, P.to - 0.2, P.to) });\n  shout(ctx, lines[1].words, t, { cx: 2900, y: 1500, big: 330, alpha: outFade(t, P.to - 0.2, P.to) });"),
   's31-road2': sb("({ pos: [9 - 4 * p, 1.6, -10 + 9 * p], target: [2 - 4 * p, 5, 12], fov: 56 })", fill="5.0",
                   lyric=V % "x: 260, y: 1500, px: 190, align: 'left', group: 2, gap: 1.3"),
-  's32-holy2': sb("({ pos: [0, 2.0 + 6 * p, 0.01], target: [0.0, 30, 0.02], fov: 72 - 8 * p, roll: -0.4 - 0.8 * p })", fill="6.0",
+  's32-holy2': sb("({ pos: [4.0 * Math.sin(0.6 + 1.2 * p), 9.5, 4 - 4.0 * Math.cos(0.6 + 1.2 * p)], target: [0, 9.5, 4], fov: 60 })", fill="6.0",
                   lyric="verse(ctx, t, P, lines, { x: 1920, y: 1180, px: 290, align: 'center', group: 1 });"),
   's33-mercy': sb("({ pos: [0, 12.5 - 0.6 * p, -11 + 0.6 * p], target: [0, 6, 8], fov: 44 })", fill="5.0",
                   lyric="verse(ctx, t, P, lines, { x: 1920, y: 1500, px: 300, align: 'center', group: 1 });"),
@@ -121,9 +121,10 @@ export default (P) => {{ const lines = linesIn(P); return spilledShot(P, {{ {', 
         if 'flash' in s: opts.append(f"flash: (t) => {s['flash']}")
         if 'update' in s: opts.append(f"update: (t, u) => {{ {s['update']} }}")
         if 'exposure' in s: opts.append(f"exposure: {s['exposure']}")
+        if 'drift' in s: opts.append(f"drift: {s['drift']}")
         if 'post' in s: opts.append(f"post: (t) => {s['post']}")
         body = f"""import {{ gothicShot, lightning }} from '/song/lib/shots.js';
-import {{ linesIn }} from '/song/lib/type.js';
+import {{ linesIn, ease }} from '/song/lib/type.js';
 export const kind = 'shader';
 export default (P) => {{ const lines = linesIn(P); return gothicShot(P, {{ {', '.join(opts)} }}); }};
 """
