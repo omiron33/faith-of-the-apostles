@@ -24,5 +24,8 @@
     }
   },
   "youtubeUrl": "https://www.youtube.com/watch?v=GIqK4IMjw0g",
-  "websiteUrl": "https://technochristianity.com/music/"
+  "websiteUrl": "https://technochristianity.com/music/",
+  "status": "superseded",
+  "supersededBy": "v3",
+  "supersededByUrl": "https://github.com/omiron33/faith-of-the-apostles/releases/tag/v3.0.0"
 }

@@ -1,6 +1,6 @@
 {
   "name": "faith-of-the-apostles",
-  "version": "2.1.0",
+  "version": "3.0.0",
   "private": true,
   "type": "module",
   "description": "Code-rendered lyric film and portable renderer for The Faith of the Apostles",

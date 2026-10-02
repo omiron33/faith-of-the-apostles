@@ -6,7 +6,7 @@ The film is deterministic: each frame depends on the scene parameters and song t
 
 Shader scenes export `kind = 'shader'` and a default factory receiving scene parameters. The result provides `from`, `to`, GLSL `frag`, uniforms, a camera function and optional update, text-plane and finishing functions. Three.js scenes export `kind = 'three'` and return their world through the premium runtime contract.
 
-`lib/gothic.js` draws the Gothic nave. `lib/spilled.js` loads the public church geometry and replaces its surfaces with procedural materials. `lib/shots.js` defines church camera shots. The `lib/x-*.js` files provide individual verse worlds, including the road, sea, map, succession candles, schism, tomb and forge. `lib/shatter.js` supplies the carved-word treatment used in v2.
+`lib/gothic.js` draws the Gothic nave. `lib/spilled.js` loads the public church geometry and replaces its surfaces with procedural materials. `lib/shots.js` defines church camera shots. The `lib/x-*.js` files provide individual verse worlds, including the road, sea, map, succession candles, schism, tomb and forge. `lib/firetext.js` supplies the deterministic flames and ember lettering used in the v3 lyric sequence.
 
 ## Lyric modules
 

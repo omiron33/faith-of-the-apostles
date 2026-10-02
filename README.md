@@ -4,9 +4,9 @@ An Orthodox Christian song and code-rendered lyric film about the faith handed d
 
 ![The Faith of the Apostles: amber title in a candlelit cathedral](docs/poster.jpg)
 
-[Listen and watch at TechnoChristianity](https://technochristianity.com/music/) · [Watch the official video](https://www.youtube.com/watch?v=GIqK4IMjw0g) · [Download the song and video](https://github.com/omiron33/faith-of-the-apostles/releases/tag/v2.1.0)
+[Listen and watch at TechnoChristianity](https://technochristianity.com/music/) · [Watch the official video](https://www.youtube.com/watch?v=d9gm3WmhYlE) · [Download the song and video](https://github.com/omiron33/faith-of-the-apostles/releases/tag/v3.0.0)
 
-The v2 film runs **4:41**, at **1920 × 1080 / 60 fps**. Its 38 scenes combine GPU shaders, a reconstructed church interior, procedural materials and typography aligned to the recording. The source includes the deterministic rendering runtime used by these scenes, with a portable command-line interface.
+The v3 film runs **4:41**, at **1920 × 1080 / 60 fps**. Its 38 scenes combine GPU shaders, a reconstructed church interior, procedural materials and typography aligned to the recording. The source includes the deterministic rendering runtime used by these scenes, with a portable command-line interface.
 
 ## Quick start
 
@@ -46,7 +46,7 @@ Full rendering is GPU intensive and can take hours. The draft uses 30 fps and tw
 - `data/` — aligned words, measured musical timing and the pinned model manifest.
 - `renderer/` — deterministic browser rendering and local FFmpeg encoding.
 - `tools/` — rendering, validation and optional timing utilities.
-- `releases/v2.json` — published master, web derivative and source-audio fingerprints.
+- `releases/v3.json` — published master, web derivative and source-audio fingerprints.
 
 [Scene architecture](docs/AUTHORING.md) · [Visual notes](docs/BRIEF.md) · [Credits and licenses](docs/CREDITS.md)
 

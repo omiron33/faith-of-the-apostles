@@ -23,7 +23,7 @@ npm run render -- --out out/film.mp4
 
 The title, Gothic nave and shader verse worlds can render without the church model. Three.js church scenes require the pinned package installed by `npm run assets`. The download includes the public model's attribution documents. An existing copy can be verified and installed with `npm run assets -- --source /path/to/model-package`.
 
-The full-film command needs `media/song.wav`. The v2 recording's SHA-256 is `a144606aa0b3073751a6232d0cfa857a22fd1a9e9f9736ecd56d63fef78ccef3`; its duration is 281.6 seconds, PCM 16-bit stereo at 48 kHz. The recording is distributed separately from the source.
+The full-film command needs `media/song.wav`. The recording is unchanged in v3. Its SHA-256 is `a144606aa0b3073751a6232d0cfa857a22fd1a9e9f9736ecd56d63fef78ccef3`; its duration is 281.6 seconds, PCM 16-bit stereo at 48 kHz. The recording is distributed separately from the source.
 
 ## Output and caching
 
@@ -31,7 +31,7 @@ Still images go to `out/portable/stills/`. Final-quality scene files go to `out/
 
 The runner renders one scene at a time, composites its transparent lyric layer, then joins the scene files with the original recording. Cache keys cover renderer code, scene dependencies, timing, quality and the render interval. A successful cached scene is reused. The released film uses hard cuts; the portable runner deliberately rejects unimplemented transition types.
 
-The reusable browser runtime and scene shaders are preserved from the production renderer. The portable orchestrator removes machine-specific dispatch and accepts ordinary CLI calls. Output may vary with the GPU, Chrome version and encoder; do not expect byte-identical exports across machines. The v2 media fingerprints identify the exact released files.
+The reusable browser runtime and scene shaders are preserved from the production renderer. The portable orchestrator removes machine-specific dispatch and accepts ordinary CLI calls. Output may vary with the GPU, Chrome version and encoder; do not expect byte-identical exports across machines. The v3 media fingerprints identify the exact released files.
 
 ## GPU backend
 
