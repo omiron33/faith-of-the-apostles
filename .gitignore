@@ -1,0 +1,16 @@
+.DS_Store
+intake/
+intake/*.wav
+intake/suno-metadata.json
+lib/_old/
+lib/g8/
+media/
+models/
+movies/
+node_modules/
+out/
+scenes/_old/
+._*
+tools/sheet.sh
+tools/provisional.py
+movies/

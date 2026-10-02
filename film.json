@@ -1,0 +1,245 @@
+{
+ "fps": 60,
+ "samples": 16,
+ "tier": "premium",
+ "lyric": {
+  "haloSpread": 9,
+  "shade": 0.5
+ },
+ "scenes": [
+  {
+   "id": "00",
+   "scene": "s00-title",
+   "from": 0.0,
+   "to": 11.91,
+   "hold": "the title over the instrumental opening"
+  },
+  {
+   "id": "01",
+   "scene": "s01-doors",
+   "from": 11.91,
+   "to": 26.99,
+   "hold": "the doors open slowly on the long instrumental call"
+  },
+  {
+   "id": "02",
+   "scene": "s02-road",
+   "from": 26.99,
+   "to": 34.39
+  },
+  {
+   "id": "03",
+   "scene": "s03-lamp",
+   "from": 34.39,
+   "to": 40.71
+  },
+  {
+   "id": "04",
+   "scene": "s04-sea",
+   "from": 40.71,
+   "to": 48.3
+  },
+  {
+   "id": "05",
+   "scene": "s05-map",
+   "from": 48.3,
+   "to": 55.55
+  },
+  {
+   "id": "06",
+   "scene": "s06-succession",
+   "from": 55.55,
+   "to": 62.8
+  },
+  {
+   "id": "07",
+   "scene": "s07-kings",
+   "from": 62.8,
+   "to": 69.59
+  },
+  {
+   "id": "08",
+   "scene": "s08-ruins",
+   "from": 69.59,
+   "to": 77.28
+  },
+  {
+   "id": "09",
+   "scene": "s09-font",
+   "from": 77.28,
+   "to": 84.84
+  },
+  {
+   "id": "10",
+   "scene": "s10-faith",
+   "from": 84.84,
+   "to": 87.92
+  },
+  {
+   "id": "11",
+   "scene": "s11-fathers",
+   "from": 87.92,
+   "to": 91.99
+  },
+  {
+   "id": "12",
+   "scene": "s12-nave",
+   "from": 91.99,
+   "to": 98.76
+  },
+  {
+   "id": "13",
+   "scene": "s13-holy",
+   "from": 98.76,
+   "to": 105.53
+  },
+  {
+   "id": "14",
+   "scene": "s14-mighty",
+   "from": 105.53,
+   "to": 112.61
+  },
+  {
+   "id": "15",
+   "scene": "s15-shores",
+   "from": 112.61,
+   "to": 120.64
+  },
+  {
+   "id": "16",
+   "scene": "s16-thrones",
+   "from": 120.64,
+   "to": 127.85
+  },
+  {
+   "id": "17",
+   "scene": "s17-years",
+   "from": 127.85,
+   "to": 135.06
+  },
+  {
+   "id": "18",
+   "scene": "s18-cracks",
+   "from": 135.06,
+   "to": 142.27
+  },
+  {
+   "id": "19",
+   "scene": "s19-slab",
+   "from": 142.27,
+   "to": 149.03
+  },
+  {
+   "id": "20",
+   "scene": "s20-edge",
+   "from": 149.03,
+   "to": 157.02
+  },
+  {
+   "id": "21",
+   "scene": "s21-error",
+   "from": 157.02,
+   "to": 160.95
+  },
+  {
+   "id": "22",
+   "scene": "s22-reject",
+   "from": 160.95,
+   "to": 170.84,
+   "hold": "the hard silence after the error"
+  },
+  {
+   "id": "23",
+   "scene": "s23-held",
+   "from": 170.84,
+   "to": 178.35
+  },
+  {
+   "id": "24",
+   "scene": "s24-trinity",
+   "from": 178.35,
+   "to": 185.55
+  },
+  {
+   "id": "25",
+   "scene": "s25-councils",
+   "from": 185.55,
+   "to": 192.6
+  },
+  {
+   "id": "26",
+   "scene": "s26-theotokos",
+   "from": 192.6,
+   "to": 199.77
+  },
+  {
+   "id": "27",
+   "scene": "s27-descent",
+   "from": 199.77,
+   "to": 206.94
+  },
+  {
+   "id": "28",
+   "scene": "s28-tomb",
+   "from": 206.94,
+   "to": 214.1
+  },
+  {
+   "id": "29",
+   "scene": "s29-faith2",
+   "from": 214.1,
+   "to": 218.14
+  },
+  {
+   "id": "30",
+   "scene": "s30-fathers2",
+   "from": 218.14,
+   "to": 221.76
+  },
+  {
+   "id": "31",
+   "scene": "s31-road2",
+   "from": 221.76,
+   "to": 228.58
+  },
+  {
+   "id": "32",
+   "scene": "s32-holy2",
+   "from": 228.58,
+   "to": 235.83
+  },
+  {
+   "id": "33",
+   "scene": "s33-mercy",
+   "from": 235.83,
+   "to": 241.35
+  },
+  {
+   "id": "34",
+   "scene": "s34-why",
+   "from": 241.35,
+   "to": 250.43,
+   "hold": "slower, melodic verse"
+  },
+  {
+   "id": "35",
+   "scene": "s35-complete",
+   "from": 250.43,
+   "to": 258.13
+  },
+  {
+   "id": "36",
+   "scene": "s36-theosis",
+   "from": 258.13,
+   "to": 268.17,
+   "hold": "the held last line"
+  },
+  {
+   "id": "37",
+   "scene": "s37-end",
+   "from": 268.17,
+   "to": 281.6,
+   "hold": "the outro and credit"
+  }
+ ]
+}
