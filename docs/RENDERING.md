@@ -7,7 +7,7 @@
 - FFmpeg with H.264 (`libx264`), AAC and FFV1 support.
 - Dependencies installed with `npm ci`: Three.js 0.180.0 and playwright-core 1.55.0.
 
-The bundled runtime is the photoreal scene renderer used for this film. It reads `film.json`; this is a different format from the general [Ark Engine](https://github.com/omiron33/ark-engine) project format. No model API, cloud account or language-model process is required to render.
+The bundled runtime is the photoreal scene renderer used for this film. It reads `film.json`; this is a different format from the general [Ark engine](https://github.com/omiron33/ark-video-studio) project format. No model API, cloud account or language-model process is required to render.
 
 ## Commands
 
